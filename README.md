@@ -1,12 +1,14 @@
 # RPi_matrix_16_keypad
 RPi3 with matrix membrane 16 keys Keypad using GPIO pinout
 
+# Please improve this by sending a PR
+
 # Installing prerequisite GPIO modules
 
 ## RPi.GPIO vs RPIO vs wiringpi2
 Not sure which is better. RPIO claims to be an evolved version, but it seems to have older code than RPi.GPIO.
 Just installed and tested both.
-wiringpi2 seems to be for more advanced functionality (https://pinout.xyz/pinout/wiringpi). 
+wiringpi2 seems to be for more advanced functionality. 
 Not planning to use it for now.
 
 ## Common installation section:
@@ -18,20 +20,29 @@ sudo apt-get remove python-rpi.gpio python3-rpi.gpio
 ```
 
 ## RPi.GPIO
+- Steps (after the above common section)
 ```
 sudo apt-get install mercurial
 sudo pip install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
 sudo pip3 install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
 ```
+- Links: https://sourceforge.net/p/raspberry-gpio-python/
 
 ## RPIO 
-1. My steps after the above common section
+- Steps (after the above common section)
 ```
 sudo easy_install -U RPIO
 sudo easy_install3 -U RPIO
 ```
-2. Docs
-- https://pythonhosted.org/RPIO/
+- Links: https://pythonhosted.org/RPIO/
+
+## wiringpi2
+- Steps (after the above common section)
+```
+sudo pip install wiringpi2
+sudo pip3 install wiringpi2
+```
+- Links: https://pinout.xyz/pinout/wiringpi
 
 # Troubleshooting:
 2. If you get an error like:
@@ -61,3 +72,4 @@ For more advanced things try python module wiringpi2
 Pinout links:
 - https://pinout.xyz/pinout/ 
 - http://pi4j.com/pins/model-3b-rev1.html (just to confirm model3b has same pinout)
+- https://sourceforge.net/p/raspberry-gpio-python/wiki/TechRef/  (Tech Refence - BCM2835_GPIOs description pdf)
