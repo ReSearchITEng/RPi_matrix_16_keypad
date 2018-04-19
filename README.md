@@ -1,7 +1,7 @@
 # RPi_matrix_16_keypad
 RPi3 with matrix membrane 16 keys Keypad using GPIO pinout
 
-# Please improve this by sending a PR
+#### Please improve this project by sending a PR
 
 # Installing prerequisite GPIO modules
 
