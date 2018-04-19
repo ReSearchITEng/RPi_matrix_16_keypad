@@ -1,5 +1,5 @@
 # RPi_matrix_16_keypad
-RPi3 with matrix membrane 16 keys Keypad using GPIO pinout
+RPi3 with matrix membrane 4x4 16 keys Keypad
 
 #### Please improve this project by sending a PR
 
@@ -54,12 +54,15 @@ sudo pip3 install wiringpi
 - Links: https://pinout.xyz/pinout/wiringpi
 
 # Troubleshooting:
+1. Note the Pinout. There are multiple numbering schemes: BCM(Broadcom), Board(physical pin numbers), wiringpi, etc.
+   **Solution** is: in your library you have a function to choose the numbering scheme. In my example below is BCM.
+   
 2. If you get an error like:
 "unable to execute 'arm-linux-gnueabihf-gcc': No such file or directory
 error: Setup script exited with error: command 'arm-linux-gnueabihf-gcc' failed with exit status 1 "
 **Solution** is: Check the above Common installation section: `apt-get install build-essential`
 
-2. If you get an error like:
+3. If you get an error like:
 "The installation directory you specified (via --install-dir, --prefix, or
 the distutils default setting) was:
 
@@ -87,7 +90,7 @@ Pinout links:
 # Code options:
 - cpp (instead of python): https://github.com/ilhamadun/WiringPiKeypad
 
-# Finally the app is:
+# Finally the 4x4 keypad app is:
 ```python
 from pad4pi import rpi_gpio
 import time
@@ -130,3 +133,4 @@ except:
 
 #keypad.cleanup()
 ```
+
