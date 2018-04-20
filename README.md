@@ -18,7 +18,7 @@ sudo apt-get install python-pip python3-pip python3-setuptools python-setuptools
 sudo apt-get remove python-rpi.gpio python3-rpi.gpio
 ```
 
-## pad4pi
+## pad4pi (the one I used in below example)
 - Steps (after the above common section):
 ```
 sudo pip install wheel
@@ -27,6 +27,7 @@ sudo pip install pad4pi
 sudo pip3 install pad4pi
 ```
 - Links: https://pypi.org/project/pad4pi/
+The code below uses this pad4pi
 
 ## RPi.GPIO
 - Steps (after the above common section)
@@ -35,7 +36,7 @@ sudo apt-get install mercurial
 sudo pip install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
 sudo pip3 install hg+http://hg.code.sf.net/p/raspberry-gpio-python/code#egg=RPi.GPIO
 ```
-- Links: https://sourceforge.net/p/raspberry-gpio-python/
+- Links: https://sourceforge.net/p/raspberry-gpio-python/; for code examples check here: https://github.com/srih4ri/RpiMatrixKeyboard/blob/master/1.py
 
 ## RPIO 
 - Steps (after the above common section)
